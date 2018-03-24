@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/skills', function () {
+    return App\Models\Skill::all();
+});
+
+
+Route::post('/skills', 'Admin\SkillController@store')->name('skills.store');
